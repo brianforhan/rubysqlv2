@@ -18,9 +18,9 @@ apple = Company.where({ name: "Apple Inc." })[0]
 apple_id = apple.id
 contacts = Contact.where(company_id: apple_id)
 
-p "Contacts at Apple: #{contacts.count}"
+puts "Contacts at Apple: #{contacts.count}"
 for contact in contacts
-    p "#{contact.first_name} #{contact.last_name}"
+    puts "#{contact.first_name} #{contact.last_name}"
 end
 
 # BEST
@@ -29,7 +29,7 @@ end
 # 2. add association to contacts in models/company.rb
 # 
 # def contacts
-#   Contact.where(company_id: id)
+#    Contact.where(company_id: id)
 # end
 # 
 # replace with association method
